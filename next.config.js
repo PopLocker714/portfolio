@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/150/**',
       },
+      {
+        protocol: "http",
+        hostname: "placehold.it",
+        port: '',
+        pathname: "/**"
+      }
     ],
   },
 }

@@ -1,10 +1,11 @@
 import { LucideIcon } from "lucide-react";
+import { IconType } from "react-icons";
 import Link from "next/link";
 import React, { ReactNode } from "react";
 
 interface ISocialLinkProps {
   href: string;
-  Icon: LucideIcon;
+  Icon: LucideIcon | IconType;
   target?: "blank" | "";
   size?: number;
 }
