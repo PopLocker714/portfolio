@@ -68,7 +68,7 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="mb-20">
-      <Separator variant="bottom" classNameSVG="bg-secondary text-background" />
+      <Separator variant="bottom" classNameSVG="bg-secondary text-background sm:mb-0 mb-10" />
       <div className="container">
         <h2 className="text-center scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
           Проекты
@@ -76,7 +76,7 @@ export const Projects = () => {
         <p className="text-center text-xl text-muted-foreground mb-24">
           Вещи, которые я создал на данный момент
         </p>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:justify-items-center">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
           {projectsWithId.map((project) => (
             <ProjectCard key={project.id} {...project} />
           ))}

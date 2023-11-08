@@ -11,7 +11,6 @@ import { Badge } from "../ui/badge";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Github, Gitlab, LinkIcon } from "lucide-react";
-import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 
 export interface IProjectCard {
   header: string;

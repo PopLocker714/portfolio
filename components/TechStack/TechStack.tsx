@@ -70,7 +70,7 @@ export const TechStack = () => {
   const techStackItemsWithId = techStackItems.map((item) => generateId(item));
 
   return (
-    <section className="pb-20 bg-secondary">
+    <section className="pb-20 sm:pt-0 pt-10 bg-secondary">
       <div className="container">
         <h2 className="text-center scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
           Мой технический стек

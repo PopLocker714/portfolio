@@ -1,5 +1,5 @@
 export const BackgroundAnimation = () => (
-  <div className="absolute w-[602px] h-[602px] z-[-1] top-0">
+  <div className="absolute md:w-[602px] w-full z-[-1] top-0">
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"

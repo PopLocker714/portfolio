@@ -3,7 +3,7 @@ import { ContactForm } from "./ContactForm";
 
 export const Contacts = () => {
   return (
-    <section id="contacts" className="py-20">
+    <section id="contacts" className="py-10 md:py-20">
       <div className="container">
         <h2 className="text-center scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
           Контакты

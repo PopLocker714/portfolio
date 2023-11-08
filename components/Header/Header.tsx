@@ -1,16 +1,13 @@
 import { Github, Gitlab, LucideIcon } from "lucide-react";
 import { SocialIcon } from "../ui/socialIcon";
 import { Logo } from "../Logo";
-import { INavItem, Navigation } from "../Navigation";
 import { TbBrandTelegram } from "react-icons/tb";
 import { IconType } from "react-icons";
 import { useGenerateId } from "@/hooks/useGenerateId";
+import { INavItem, Navigation } from "../Navigation";
+import { MenuBurger } from "../MenuBurger";
 
 export const links: INavItem[] = [
-  {
-    text: "Главная",
-    href: "#main",
-  },
   {
     text: "Обо мне",
     href: "#about",
@@ -23,9 +20,13 @@ export const links: INavItem[] = [
     text: "Проекты",
     href: "#projects",
   },
+  {
+    text: "Контакты",
+    href: "#contacts",
+  },
 ];
 
-interface ISocialLinks {
+export interface ISocialLinks {
   href: string;
   icon: LucideIcon | IconType;
   id?: string;
@@ -46,24 +47,28 @@ export const socialLinks: ISocialLinks[] = [
   },
 ];
 
-export const Header = () => {
+export const Header: React.FC = () => {
   const [generateId] = useGenerateId();
   const linksWithId = links.map((item) => generateId(item));
   const socialLinksWithId = socialLinks.map((item) => generateId(item));
 
   return (
-    <header className="w-full fixed backdrop-blur top-0 z-50 border-b-[0.5px] border-secondary/10 py-5 px-10">
+    <header className="w-full fixed backdrop-blur top-0 z-50 border-b-[0.5px] border-secondary/10 py-2 md:py-5">
       <div className="container">
-        <nav className=" flex justify-between items-center w-full">
+        <nav className="flex justify-between items-center w-full">
           <Logo />
-          <Navigation links={linksWithId} />
-          <ul className="flex justify-between items-center w-[110px]">
+          <Navigation
+            className="hidden lg:flex w-[500px] justify-between"
+            links={linksWithId}
+          />
+          <ul className="hidden lg:flex justify-between items-center w-[110px]">
             {socialLinksWithId.map((link) => (
               <li key={link.id}>
-                <SocialIcon target="blank" href={link.href} Icon={link.icon} />
+                <SocialIcon target="_blank" href={link.href} Icon={link.icon} />
               </li>
             ))}
           </ul>
+          <MenuBurger links={linksWithId} />
         </nav>
       </div>
     </header>

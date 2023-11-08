@@ -1,9 +1,6 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
-
-interface INavigationProps {
-  links: INavItem[];
-}
+import { HTMLAttributes } from "react";
 
 export interface INavItem {
   text: string;
@@ -11,16 +8,24 @@ export interface INavItem {
   id?: string;
 }
 
-export const Navigation = ({ links }: INavigationProps) => {
-  
+interface INavigationProps extends HTMLAttributes<HTMLUListElement> {
+  links: INavItem[];
+  listItemClassName?: HTMLAttributes<HTMLLIElement>["className"];
+}
 
+export const Navigation: React.FC<INavigationProps> = ({
+  links,
+  className,
+  listItemClassName,
+  onClick,
+}) => {
   return (
-    <ul className="flex w-[500px] items-center justify-between">
-      {links.map((item) => (
-        <li key={item.id}>
-          <Link href={item.href}>
-            <Button className="text-gray-300" size={"linkLeader"} variant={"link"}>
-              {item.text}
+    <ul onClick={onClick} className={className}>
+      {links.map((link) => (
+        <li className={listItemClassName} key={link.id}>
+          <Link href={link.href}>
+            <Button className="text-gray-300" size="linkLeader" variant="link">
+              {link.text}
             </Button>
           </Link>
         </li>

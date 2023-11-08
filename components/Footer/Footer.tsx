@@ -1,26 +1,17 @@
 import React from "react";
-import { useGenerateId } from "@/hooks/useGenerateId";
-import { links, socialLinks } from "../Header";
-import { Navigation } from "../Navigation";
-import { SocialIcon } from "../ui/socialIcon";
+import Link from "next/link";
 
 export const Footer = () => {
-  const [generateId] = useGenerateId();
-  const linksWithId = links.map((item) => generateId(item));
-  const socialLinksWithId = socialLinks.map((item) => generateId(item));
-
   return (
     <footer className="bg-secondary">
-      <div className="container py-8">
-        <div className="flex justify-between">
-          <Navigation links={linksWithId} />
-          <ul className="flex justify-between items-center w-[110px]">
-            {socialLinksWithId.map((link) => (
-              <li key={link.id}>
-                <SocialIcon target="blank" href={link.href} Icon={link.icon} />
-              </li>
-            ))}
-          </ul>
+      <div className="container py-3">
+        <div className="flex items-center justify-between">
+          <p className="mr-2">2023 © Kiselev Ilya</p>
+          <Link href="/privacy">
+            <p className="hover:underline underline-offset-4 text-lg text-blue-300">
+              Политика конфиденциальности
+            </p>
+          </Link>
         </div>
       </div>
     </footer>

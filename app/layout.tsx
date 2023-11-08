@@ -7,6 +7,12 @@ import { Toaster } from "@/components/ui/toaster"
 export const metadata: Metadata = {
   title: "Илья Киселев",
   description: "Портфолио Илья Киселев разработка сайта",
+  icons: {
+    icon: {
+      url: "/favicon.svg",
+      type: "image/svg+xml",
+    }
+  }
 };
 
 export const fontSans = FontSans({
