@@ -23,29 +23,27 @@ export const Projects = () => {
       sourceCodeIcon: "gitlab",
     },
     {
-      header: "Something",
+      header: "W-Wave-Radio",
       description:
-        "Это веб приложение основанное на&nbsp;методе &laquo;Помодоро&raquo; Пользователь может запланировать несколько задач на&nbsp;свой день и&nbsp;для каждой задать примерное количество &laquo;помидоров&raquo;, которое необходимо, чтобы её&nbsp;сделать.",
-      // preview: "/projects/tomodoro.jpg",
-      sourceCodeLink: "https://gitlab.com/jonirootman714/tomodoro",
-      livePreviewLink: "https://poplocker714.github.io/",
+        "Это одностраничный сайт который является вымышленной радиоплощадкой «W-Wave-Radio». Предполагается что пользователь будет слушать радио в прямом эфире, ранее записанные подкасты, передачи и т. д., а также видеть информацию о ведущих эфиров и о самом радио. При создании сайта использовал методологию БЭМ а также предпроцессор SASS.",
+      preview: "/projects/w-wave-radio.jpg",
+      sourceCodeLink: "https://github.com/PopLocker714/Course-W-Wave-Radio",
+      livePreviewLink: "https://course-w-wave-radio.neocities.org/",
       techStack: [
-        { name: "React" },
-        { name: "Recoil" },
-        { name: "Tailwind" },
-        { name: "Shadcnui" },
-        { name: "Typescript" },
+        { name: "Html" },
+        { name: "Css" },
+        { name: "Sass" },
         { name: "JavaScript" },
+        { name: "Webpack" },
         { name: "Git" },
       ],
-      sourceCodeIcon: "gitlab",
+      sourceCodeIcon: "github",
     },
     {
-      header: "Tomodoro",
-      description:
-        "Это веб приложение основанное на методе «Помодоро» Пользователь может запланировать несколько задач на свой день и для каждой задать примерное количество «помидоров», которое необходимо, чтобы её сделать. Это веб приложение основанное на&nbsp;методе &laquo;Помодоро&raquo; Пользователь может запланировать несколько задач на&nbsp;свой день и&nbsp;для каждой задать примерное количество &laquo;помидоров&raquo;, которое необходимо, чтобы её&nbsp;сделать.",
-      preview: "/projects/tomodoro.jpg",
-      sourceCodeLink: "https://gitlab.com/jonirootman714/tomodoro",
+      header: "SitDownPls",
+      description: "",
+      // preview: "/projects/tomodoro.jpg",
+      sourceCodeLink: "https://gitlab.com/jonirootman714/sit-down-pls",
       livePreviewLink: "https://poplocker714.github.io/",
       techStack: [
         { name: "React" },
@@ -68,7 +66,10 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="mb-20">
-      <Separator variant="bottom" classNameSVG="bg-secondary text-background sm:mb-0 mb-10" />
+      <Separator
+        variant="bottom"
+        classNameSVG="bg-secondary text-background sm:mb-0 mb-10"
+      />
       <div className="container">
         <h2 className="text-center scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
           Проекты
