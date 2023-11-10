@@ -33,7 +33,7 @@ export const ProjectCard = ({
   header,
   description,
   techStack,
-  livePreviewLink = "#",
+  livePreviewLink,
   sourceCodeLink = "#",
   id,
   sourceCodeIcon = "other",
@@ -51,7 +51,7 @@ export const ProjectCard = ({
           width={384}
           height={260}
           className="rounded-t-md object-cover"
-          src={preview || ''}
+          src={preview || ""}
           alt={header}
         />
       </CardHeader>
@@ -63,19 +63,31 @@ export const ProjectCard = ({
         ></CardDescription>
         <div className="flex flex-wrap">
           {techStack.map((badge) => (
-            <Badge key={badge.id} className="mr-[2px] last:mr-0 mb-1" variant="outline">
+            <Badge
+              key={badge.id}
+              className="mr-[2px] last:mr-0 mb-1"
+              variant="outline"
+            >
               {badge.name}
             </Badge>
           ))}
         </div>
       </CardContent>
       <CardFooter className="justify-between flex-wrap px-5 pb-4  items-end">
-        <Link className="mr-1 flex" target="_blank" href={livePreviewLink}>
-          <Button className="px-0" variant={"link"}>
+        {livePreviewLink ? (
+          <Link className="mr-1 flex" target="_blank" href={livePreviewLink}>
+            <Button className="px-0" variant={"link"}>
+              <LinkIcon className="mr-1" />
+              Предварительный просмотр
+            </Button>
+          </Link>
+        ) : (
+          <Button disabled className="px-0" variant={"link"}>
             <LinkIcon className="mr-1" />
             Предварительный просмотр
           </Button>
-        </Link>
+        )}
+
         <Link className="flex" target="_blank" href={sourceCodeLink}>
           <Button className="px-0" variant={"link"}>
             <CurrentSourceCodeIcon className="mr-1" />
