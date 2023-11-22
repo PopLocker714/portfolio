@@ -31,9 +31,9 @@ export const Hero = () => {
             className="hover:underline underline-offset-4 text-lg text-blue-300"
             target="_blank"
             download
-            href="Portfolio_Kiselev_Ilya.pdf"
+            href="Portfolio.docx"
           >
-            Скачать в pdf
+            Скачать портфолио 🡇
           </Link>
         </div>
       </div>
