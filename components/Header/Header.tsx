@@ -10,19 +10,19 @@ import { MenuBurger } from "../MenuBurger";
 export const links: INavItem[] = [
   {
     text: "Обо мне",
-    href: "#about",
+    href: "/#about",
   },
   {
     text: "Технический стек",
-    href: "#tech-stack",
+    href: "/#tech-stack",
   },
   {
     text: "Проекты",
-    href: "#projects",
+    href: "/#projects",
   },
   {
     text: "Контакты",
-    href: "#contacts",
+    href: "/#contacts",
   },
 ];
 

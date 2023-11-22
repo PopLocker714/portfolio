@@ -45,7 +45,11 @@ export const ProjectCard = ({
       ? Gitlab
       : LinkIcon;
   return (
-    <Card key={id} className="w-full max-w-sm flex flex-col">
+    <Card
+      key={id}
+      className="max-w-sm relative h-full flex flex-col transition-shadow hover:shadow-[0px_2px_45px_-5px_rgba(256,256,256,0.3)]"
+    >
+      <Link href={`projects/${id}`} className="w-full h-full absolute z-0" />
       <CardHeader className="p-0">
         <Image
           width={384}
@@ -73,22 +77,22 @@ export const ProjectCard = ({
           ))}
         </div>
       </CardContent>
-      <CardFooter className="justify-between flex-wrap px-5 pb-4  items-end">
+      <CardFooter className="justify-between flex-wrap px-5 pb-4 items-end">
         {livePreviewLink ? (
-          <Link className="mr-1 flex" target="_blank" href={livePreviewLink}>
+          <Link className="mr-1 flex relative z-[5]" target="_blank" href={livePreviewLink}>
             <Button className="px-0" variant={"link"}>
               <LinkIcon className="mr-1" />
               Предварительный просмотр
             </Button>
           </Link>
         ) : (
-          <Button disabled className="px-0" variant={"link"}>
+          <Button disabled className="px-0 relative z-[5]" variant={"link"}>
             <LinkIcon className="mr-1" />
             Предварительный просмотр
           </Button>
         )}
 
-        <Link className="flex" target="_blank" href={sourceCodeLink}>
+        <Link className="flex relative z-[5]" target="_blank" href={sourceCodeLink}>
           <Button className="px-0" variant={"link"}>
             <CurrentSourceCodeIcon className="mr-1" />
             Исходный код
