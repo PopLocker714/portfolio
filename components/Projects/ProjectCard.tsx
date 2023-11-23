@@ -17,15 +17,15 @@ export interface IProjectCard {
   description: string;
   techStack: Array<IProjectTechStack>;
   sourceCodeLink: string;
+  id: string;
   livePreviewLink?: string;
   preview?: string;
-  id?: string;
-  sourceCodeIcon?: "github" | "gitlab" | "other";
+  sourceCodeIcon?: "github" | "gitlab" | "other" | string;
 }
 
 interface IProjectTechStack {
   name: string;
-  id?: string;
+  id: string;
 }
 
 export const ProjectCard = ({
@@ -44,6 +44,7 @@ export const ProjectCard = ({
       : sourceCodeIcon === "gitlab"
       ? Gitlab
       : LinkIcon;
+
   return (
     <Card
       key={id}
@@ -64,12 +65,12 @@ export const ProjectCard = ({
         <CardDescription
           className="mb-4"
           dangerouslySetInnerHTML={{ __html: description }}
-        ></CardDescription>
+        />
         <div className="flex flex-wrap">
           {techStack.map((badge) => (
             <Badge
               key={badge.id}
-              className="mr-[2px] last:mr-0 mb-1"
+              className="mr-2 last:mr-0 mb-1"
               variant="outline"
             >
               {badge.name}
@@ -79,7 +80,11 @@ export const ProjectCard = ({
       </CardContent>
       <CardFooter className="justify-between flex-wrap px-5 pb-4 items-end">
         {livePreviewLink ? (
-          <Link className="mr-1 flex relative z-[5]" target="_blank" href={livePreviewLink}>
+          <Link
+            className="mr-1 flex relative z-[5]"
+            target="_blank"
+            href={livePreviewLink}
+          >
             <Button className="px-0" variant={"link"}>
               <LinkIcon className="mr-1" />
               Предварительный просмотр
@@ -92,7 +97,11 @@ export const ProjectCard = ({
           </Button>
         )}
 
-        <Link className="flex relative z-[5]" target="_blank" href={sourceCodeLink}>
+        <Link
+          className="flex relative z-[5]"
+          target="_blank"
+          href={sourceCodeLink}
+        >
           <Button className="px-0" variant={"link"}>
             <CurrentSourceCodeIcon className="mr-1" />
             Исходный код

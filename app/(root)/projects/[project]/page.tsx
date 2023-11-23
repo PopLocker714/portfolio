@@ -1,10 +1,27 @@
+import { Slider } from "@/components/Slider";
+import { Badge } from "@/components/ui/badge";
+import { projects } from "@/public/projects-data.json";
+
 export default function Page({ params }: { params: { project: string } }) {
+  const project = projects.find((project) => project.id === params.project);
+
   return (
-    <div className="container">
-      <p
-        className="py-28"
-        dangerouslySetInnerHTML={{ __html: params.project }}
-      ></p>
+    <div className="container py-20 px-72">
+      <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+        {project?.header}
+      </h2>
+      <div className="flex">
+        {project?.techStack.map((tech) => (
+          <Badge
+            key={tech.id}
+            className="mr-2 last:mr-0 mb-1"
+            variant="outline"
+          >
+            {tech.name}
+          </Badge>
+        ))}
+      </div>
+      <Slider />
     </div>
   );
 }

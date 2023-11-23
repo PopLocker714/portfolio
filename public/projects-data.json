@@ -1,0 +1,209 @@
+{"projects": [
+  {
+    "header": "Tomodoro",
+    "description": "Это веб приложение основанное на&nbsp;методе &laquo;Помодоро&raquo; Пользователь может запланировать несколько задач на&nbsp;свой день и&nbsp;для каждой задать примерное количество &laquo;помидоров&raquo;, которое необходимо, чтобы её&nbsp;сделать. Приложение написано на React с использованием Typescript, Tailwind, Shadcnui и со стейт-менеджером Recoil. В качестве сборщика использовался Vite.",
+    "preview": "/projects/tomodoro.jpg",
+    "sourceCodeLink": "https://gitlab.com/jonirootman714/tomodoro",
+    "livePreviewLink": "https://pomodoro-79efc.web.app/",
+    "techStack": [
+      {
+        "name": "React",
+        "id": "bb96c6ac-c2fe-482c-894c-ae9405fcd144"
+      },
+      {
+        "name": "Recoil",
+        "id": "1ea2160e-5669-4639-8451-e112a083612a"
+      },
+      {
+        "name": "Tailwind",
+        "id": "68da2b72-b8f7-4317-940c-f5b56fc96c04"
+      },
+      {
+        "name": "Shadcnui",
+        "id": "c5fd3b01-6121-4678-a059-e5c2382ee001"
+      },
+      {
+        "name": "TypeScript",
+        "id": "f43a1305-d2c6-4e49-9ce2-7b47e989ea21"
+      },
+      {
+        "name": "Vite",
+        "id": "e703b092-1efe-4799-a244-27bb073f60ba"
+      },
+      {
+        "name": "Git",
+        "id": "a84e4571-3d55-4456-b141-af46158088e4"
+      }
+    ],
+    "sourceCodeIcon": "gitlab",
+    "id": "97b23904-718a-4bae-9e44-2e704792a052"
+  },
+  {
+    "header": "Reddit Mirror",
+    "description": "Проект React (TypeScript): новостной сайт с загруженными постами и комментариями (на основе сайта Reddit и API Reddit). Реализованный функционал: Функциональные компоненты, Авторизация с использованием публичного API Reddit (получение и сохранение токена), Хуки React (useEffect, useState, useRef...), Ref и useRef React-hook — реализация механизма щелчка снаружи для скрытия модального окна, Custom hooks...",
+    "preview": "/projects/reddit-mirror.jpg",
+    "sourceCodeLink": "https://gitlab.com/jonirootman714/awesome-react",
+    "techStack": [
+      {
+        "name": "React",
+        "id": "edfa7ba2-5818-4294-8a31-bd3ee19f8b98"
+      },
+      {
+        "name": "Redux",
+        "id": "8a8bdc29-5ba0-4dda-bb87-00431c2ade52"
+      },
+      {
+        "name": "TypeScript",
+        "id": "b7b41904-a955-4e67-b4c8-09db2e3e1601"
+      },
+      {
+        "name": "Webpack",
+        "id": "78ee1235-be2f-4e0c-9342-f0dfe1184219"
+      },
+      {
+        "name": "SSR",
+        "id": "3b4ed013-6f56-45b8-9650-b35edeab8dce"
+      }
+    ],
+    "sourceCodeIcon": "gitlab",
+    "id": "e240e3f9-a450-442f-95f8-9870ef4dd965"
+  },
+  {
+    "header": "CRM",
+    "description": "Это CRM система управления контактными данными клиентов разработана для компании «SkillBus». Функционал: Возможность добавлять клиента в список, удалять, изменять; Клиенту можно добавить контакты(телефон, почту и др); Возможность список по дате создания, изменения, по Фамилии, Имени и Отчеству; Анимация открытия модального окна; Валидация формы перед отправкой на сервер; Индикация загрузки; Поиск с автодополнением.",
+    "preview": "/projects/skb.jpg",
+    "sourceCodeLink": "https://gitlab.com/jonirootman714/crm",
+    "techStack": [
+      {
+        "name": "Html",
+        "id": "936673af-ad11-4854-8703-f91ab46269b1"
+      },
+      {
+        "name": "Css",
+        "id": "29f1660a-78e6-46b7-93a4-f4f562e56c01"
+      },
+      {
+        "name": "JavaScript",
+        "id": "dcd0e3e8-925e-4020-af59-2b1b533cd85f"
+      },
+      {
+        "name": "Git",
+        "id": "1812720e-3d42-4bea-a130-6d9c1decee0c"
+      }
+    ],
+    "sourceCodeIcon": "gitlab",
+    "id": "aaa5d10e-63a4-47ab-9945-ea2bfe031d07"
+  },
+  {
+    "header": "Coin",
+    "description": "Это инновационный проект, призванный объединить воедино традиционный банкинг и криптовалюты. Это будет первый банк на рынке, который открыто и свободно позволит пользователям обмениваться и распоряжаться криптовалютами наравне с другими традиционными валютами.",
+    "preview": "/projects/Coin.jpg",
+    "sourceCodeLink": "https://gitlab.com/jonirootman714/bank",
+    "techStack": [
+      {
+        "name": "Html",
+        "id": "bb5882a9-776f-406d-a17e-ef07acebace6"
+      },
+      {
+        "name": "Css",
+        "id": "3b4a383e-02cc-4fad-8b7d-15fe0270b5cf"
+      },
+      {
+        "name": "Sass",
+        "id": "41988775-6f84-41a3-b562-0bedeaddcb45"
+      },
+      {
+        "name": "JavaScript",
+        "id": "c99fa943-cb9d-4ff2-b692-1ca77ba84329"
+      },
+      {
+        "name": "Webpack",
+        "id": "65bfa217-135d-4668-ad4b-5fd3e2e37ac7"
+      },
+      {
+        "name": "Git",
+        "id": "5d538586-336f-4d06-b550-29412a65e9bc"
+      },
+      {
+        "name": "Jest",
+        "id": "7d832ccd-417c-4973-b5c7-49ecc4282597"
+      },
+      {
+        "name": "Cypress",
+        "id": "0957b65f-97a7-4c8f-bdff-a05172f72f12"
+      }
+    ],
+    "sourceCodeIcon": "gitlab",
+    "id": "fd64e67c-72ee-487b-861c-0ef3f0889a3a"
+  },
+  {
+    "header": "SitDownPls",
+    "description": "Это многостраничный сайт который является вымышленной компанией «SitDownPls» по продаже различной мебели. На сайте доступны 3 страницы - главная, каталог, и подробное описание товара. При создании сайта использовал методологию БЭМ а также предпроцессор SASS. В качестве сборщика использовался Webpack.",
+    "preview": "/projects/sitDownPls.jpg",
+    "sourceCodeLink": "https://gitlab.com/jonirootman714/sit-down-pls",
+    "livePreviewLink": "https://sitdownpls-9892a.web.app",
+    "techStack": [
+      {
+        "name": "Pug",
+        "id": "94073642-5d7c-4a15-b90b-dc6b375d70f8"
+      },
+      {
+        "name": "Css",
+        "id": "de040eb4-081d-4602-b61c-8e7d3a7995f8"
+      },
+      {
+        "name": "Sass",
+        "id": "eefe8dbe-3daa-48d2-864a-1030abd0d752"
+      },
+      {
+        "name": "JavaScript",
+        "id": "0014df68-6466-4db2-b19e-5fa3cac7f58d"
+      },
+      {
+        "name": "Webpack",
+        "id": "55653215-37c2-4a09-af69-18ccf4d4e9ee"
+      },
+      {
+        "name": "Git",
+        "id": "cdaa3011-9c04-4225-b888-7b2e813fab8b"
+      }
+    ],
+    "sourceCodeIcon": "gitlab",
+    "id": "07aca03d-5134-4c99-b960-ebcc627a6fbb"
+  },
+  {
+    "header": "W-Wave-Radio",
+    "description": "Это одностраничный сайт который является вымышленной радиоплощадкой «W-Wave-Radio». Предполагается что пользователь будет слушать радио в прямом эфире, ранее записанные подкасты, передачи и т. д., а также видеть информацию о ведущих эфиров и о самом радио. При создании сайта использовал методологию БЭМ а также предпроцессор SASS. В качестве сборщика использовался Webpack.",
+    "preview": "/projects/w-wave-radio.jpg",
+    "sourceCodeLink": "https://gitlab.com/jonirootman714/w-wave-radio",
+    "livePreviewLink": "https://w-wave-radio.web.app/",
+    "techStack": [
+      {
+        "name": "Html",
+        "id": "640ad348-0e1b-4781-9df5-7141605b2db1"
+      },
+      {
+        "name": "Css",
+        "id": "3211e4aa-46ae-4e46-a231-9d5d18dc67cf"
+      },
+      {
+        "name": "Sass",
+        "id": "68da3f64-7c7d-44e5-8b54-e98fde192c1d"
+      },
+      {
+        "name": "JavaScript",
+        "id": "c1bcf286-6102-41fb-94b3-2cd00eec2ae9"
+      },
+      {
+        "name": "Webpack",
+        "id": "f0c8f838-bb28-4c41-bcbc-8672391d6363"
+      },
+      {
+        "name": "Git",
+        "id": "6a2e81b9-e980-4db5-95a5-2793550e71e0"
+      }
+    ],
+    "sourceCodeIcon": "github",
+    "id": "cf793e12-9c2e-4738-b5ba-a957d137da1d"
+  }
+]}

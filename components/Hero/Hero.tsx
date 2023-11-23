@@ -33,7 +33,7 @@ export const Hero = () => {
             download
             href="Portfolio.docx"
           >
-            Скачать портфолио 🡇
+            Скачать портфолио
           </Link>
         </div>
       </div>
