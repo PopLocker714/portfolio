@@ -1,11 +1,10 @@
-import { Projects } from "@/components/Projects";
 import { ProjectCard } from "@/components/Projects/ProjectCard";
 import { Input } from "@/components/ui/input";
 import React from "react";
 
-import { projects } from "@/public/projects-data.json";
+const Page = async () => {
+  const { projects } = await import("@/public/projects-data.json");
 
-const Page = () => {
   return (
     <div className="container py-20 ">
       <div className="flex items-center flex-col">

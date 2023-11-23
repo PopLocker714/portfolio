@@ -1,8 +1,8 @@
 import { Slider } from "@/components/Slider";
 import { Badge } from "@/components/ui/badge";
-import { projects } from "@/public/projects-data.json";
 
-export default function Page({ params }: { params: { project: string } }) {
+export default async function Page({ params }: { params: { project: string } }) {
+  const { projects } = await import("@/public/projects-data.json");
   const project = projects.find((project) => project.id === params.project);
 
   return (

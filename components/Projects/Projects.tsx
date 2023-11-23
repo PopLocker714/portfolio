@@ -3,9 +3,8 @@ import { Separator } from "../Separator";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-import { projects } from "@/public/projects-data.json";
-
-export const Projects = () => {
+export const Projects = async () => {
+  const { projects } = await import("@/public/projects-data.json");
   return (
     <section id="projects" className="mb-20">
       <Separator
