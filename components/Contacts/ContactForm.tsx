@@ -30,9 +30,8 @@ const FormSchema = z.object({
 interface IContactFormProps {
   botToken: string;
   chatId: string;
-  botName: string;
 }
-export function ContactForm({ botName, botToken, chatId }: IContactFormProps) {
+export function ContactForm({ botToken, chatId }: IContactFormProps) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -42,8 +41,6 @@ export function ContactForm({ botName, botToken, chatId }: IContactFormProps) {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(botName, botToken, chatId);
-
     const botUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     fetch(botUrl, {
@@ -56,25 +53,27 @@ export function ContactForm({ botName, botToken, chatId }: IContactFormProps) {
         text: `Почта: ${data.email}\nСообщение: ${data.message}`,
         parse_mode: "HTML",
       }),
-    }).then((res) => {
-      if (res.ok) {
-        form.reset();
+    })
+      .then((res) => {
+        if (res.ok) {
+          form.reset();
+          toast({
+            title: "Сообщение отправлено",
+            description: (
+              <>
+                <p>Спасибо за ваше обращение</p>
+                <p>Мы свяжемся с вами в ближайшее время</p>
+              </>
+            ),
+          });
+        }
+      })
+      .catch((err) => {
         toast({
-          title: "Сообщение отправлено",
-          description: (
-            <>
-              <p>Спасибо за ваше обращение</p>
-              <p>Мы свяжемся с вами в ближайшее время</p>
-            </>
-          ),
+          title: "Произошла ошибка",
+          description: err.message,
         });
-      }
-    }).catch((err) => {
-      toast({
-        title: "Произошла ошибка",
-        description: err.message,
       });
-    });
   }
 
   return (
@@ -88,7 +87,7 @@ export function ContactForm({ botName, botToken, chatId }: IContactFormProps) {
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="mb-4">
               <FormLabel>Почта</FormLabel>
               <FormControl>
                 <Input
@@ -105,7 +104,7 @@ export function ContactForm({ botName, botToken, chatId }: IContactFormProps) {
           control={form.control}
           name="message"
           render={({ field }) => (
-            <FormItem>
+            <FormItem className="mb-4">
               <FormLabel>Сообщение</FormLabel>
               <FormControl>
                 <Textarea placeholder="Ваше сообщение..." {...field} />

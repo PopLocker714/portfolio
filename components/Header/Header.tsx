@@ -1,4 +1,4 @@
-import { Github, Gitlab, LucideIcon } from "lucide-react";
+import { Github, Gitlab, LucideIcon, Mail } from "lucide-react";
 import { SocialIcon } from "../ui/socialIcon";
 import { Logo } from "../Logo";
 import { TbBrandTelegram } from "react-icons/tb";
@@ -34,8 +34,8 @@ export interface ISocialLinks {
 
 export const socialLinks: ISocialLinks[] = [
   {
-    href: "https://github.com/PopLocker714",
-    icon: Github,
+    href: "mailto:jonorootman714@gmail",
+    icon: Mail,
   },
   {
     href: "https://gitlab.com/jonirootman714",

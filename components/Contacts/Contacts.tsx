@@ -4,10 +4,10 @@ import { Card, CardContent, CardHeader } from "../ui/card";
 import { Button } from "../ui/button";
 
 export const Contacts = () => {
-  const { BOT_TOKEN, CHAT_ID, BOT_NAME } = process.env;
+  const { BOT_TOKEN, CHAT_ID } = process.env;
 
   return (
-    <section id="contacts" className="py-20">
+    <section id="contacts" className="py-24">
       <div className="container">
         <h2 className="text-center scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
           Контакты
@@ -26,7 +26,6 @@ export const Contacts = () => {
             <ContactForm
               botToken={BOT_TOKEN || ""}
               chatId={CHAT_ID || ""}
-              botName={BOT_NAME || ""}
             />
           </Card>
           <Card>
