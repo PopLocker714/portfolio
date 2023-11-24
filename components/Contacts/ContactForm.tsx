@@ -27,7 +27,12 @@ const FormSchema = z.object({
   }),
 });
 
-export function ContactForm() {
+interface IContactFormProps {
+  botToken: string;
+  chatId: string;
+  botName: string;
+}
+export function ContactForm({ botName, botToken, chatId }: IContactFormProps) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -37,19 +42,48 @@ export function ContactForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+    console.log(botName, botToken, chatId);
+
+    const botUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+    fetch(botUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: `Почта: ${data.email}\nСообщение: ${data.message}`,
+        parse_mode: "HTML",
+      }),
+    }).then((res) => {
+      if (res.ok) {
+        form.reset();
+        toast({
+          title: "Сообщение отправлено",
+          description: (
+            <>
+              <p>Спасибо за ваше обращение</p>
+              <p>Мы свяжемся с вами в ближайшее время</p>
+            </>
+          ),
+        });
+      }
+    }).catch((err) => {
+      toast({
+        title: "Произошла ошибка",
+        description: err.message,
+      });
     });
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="">
+      <form
+        autoComplete="off"
+        encType="multipart/form-data"
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
         <FormField
           control={form.control}
           name="email"
