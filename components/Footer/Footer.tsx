@@ -7,10 +7,11 @@ export const Footer = () => {
       <div className="container py-3">
         <div className="flex items-center justify-between">
           <p className="mr-2">2023 © Kiselev Ilya</p>
-          <Link href="/privacy">
-            <p className="hover:underline underline-offset-4 text-lg text-blue-300">
-              Политика конфиденциальности
-            </p>
+          <Link
+            className="hover:underline underline-offset-4 text-lg text-blue-300"
+            href="/privacy"
+          >
+            Политика конфиденциальности
           </Link>
         </div>
       </div>

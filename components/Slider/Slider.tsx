@@ -3,22 +3,27 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { generateUUID } from "@/utils/react/generateRandomIndex";
+import Image from "next/image";
 
-export const Slider = () => {
-  console.log(generateUUID());
-
+export const Slider = (props: {
+  images: string[];
+  imagesSize: { width: number; height: number };
+  className?: string;
+}) => {
   return (
-    <Swiper
-      className="h-96"
-      // spaceBetween={50}
-      slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide className="bg-red-500">Slide 1</SwiperSlide>
-      <SwiperSlide className="bg-green-500">Slide 2</SwiperSlide>
-      <SwiperSlide className="bg-blue-500">Slide 3</SwiperSlide>
-      <SwiperSlide className="bg-yellow-500">Slide 4</SwiperSlide>
+    <Swiper className={props.className} slidesPerView={1}>
+      {props.images.map((image) => (
+        <SwiperSlide key={generateUUID()}>
+          {
+            <Image
+              src={image}
+              width={props.imagesSize.width}
+              height={props.imagesSize.height}
+              alt=""
+            />
+          }
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

@@ -12,10 +12,12 @@ export const Contacts = () => {
         <h2 className="text-center scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
           Контакты
         </h2>
-        <p className="text-center text-xl text-muted-foreground mb-24">
-          Если у вас есть вопросы или предложения
-          Оставляйте вашу заявку или свяжитесь через социальные сети
-        </p>
+        <div className="flex justify-center mb-24">
+          <p className="text-center text-xl text-muted-foreground  max-w-xl">
+            Если у вас есть вопросы или предложения оставляйте ваше сообщение
+            или свяжитесь через мои социальные сети.
+          </p>
+        </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <Card className="p-6">
             <ContactForm botToken={BOT_TOKEN || ""} chatId={CHAT_ID || ""} />

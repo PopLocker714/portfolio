@@ -11,6 +11,7 @@ import { Badge } from "../ui/badge";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Github, Gitlab, LinkIcon } from "lucide-react";
+import { ProjectCardLinks } from "./ProjectCardLinks";
 
 export interface IProjectCard {
   header: string;
@@ -38,12 +39,12 @@ export const ProjectCard = ({
   id,
   sourceCodeIcon = "other",
 }: IProjectCard) => {
-  const CurrentSourceCodeIcon =
+  /* const CurrentSourceCodeIcon =
     sourceCodeIcon === "github"
       ? Github
       : sourceCodeIcon === "gitlab"
       ? Gitlab
-      : LinkIcon;
+      : LinkIcon; */
 
   return (
     <Card
@@ -79,34 +80,7 @@ export const ProjectCard = ({
         </div>
       </CardContent>
       <CardFooter className="justify-between flex-wrap px-5 pb-4 items-end">
-        {livePreviewLink ? (
-          <Link
-            className="mr-1 flex relative z-[5]"
-            target="_blank"
-            href={livePreviewLink}
-          >
-            <Button className="px-0" variant={"link"}>
-              <LinkIcon className="mr-1" />
-              Предварительный просмотр
-            </Button>
-          </Link>
-        ) : (
-          <Button disabled className="px-0 relative z-[5]" variant={"link"}>
-            <LinkIcon className="mr-1" />
-            Предварительный просмотр
-          </Button>
-        )}
-
-        <Link
-          className="flex relative z-[5]"
-          target="_blank"
-          href={sourceCodeLink}
-        >
-          <Button className="px-0" variant={"link"}>
-            <CurrentSourceCodeIcon className="mr-1" />
-            Исходный код
-          </Button>
-        </Link>
+        <ProjectCardLinks livePreviewLink={livePreviewLink} sourceCodeLink={sourceCodeLink} sourceCodeIcon={sourceCodeIcon}/>
       </CardFooter>
     </Card>
   );

@@ -2,7 +2,8 @@
   {
     "header": "Tomodoro",
     "description": "Это веб приложение основанное на&nbsp;методе &laquo;Помодоро&raquo; Пользователь может запланировать несколько задач на&nbsp;свой день и&nbsp;для каждой задать примерное количество &laquo;помидоров&raquo;, которое необходимо, чтобы её&nbsp;сделать. Приложение написано на React с использованием Typescript, Tailwind, Shadcnui и со стейт-менеджером Recoil. В качестве сборщика использовался Vite.",
-    "preview": "/projects/tomodoro.jpg",
+    "preview": "/projects/tomodoro/tomodoro-preview.jpg",
+    "images":["/projects/tomodoro/tomodoro-1.png", "/projects/tomodoro/tomodoro-2.png", "/projects/tomodoro/tomodoro-3.png"],
     "sourceCodeLink": "https://gitlab.com/jonirootman714/tomodoro",
     "livePreviewLink": "https://pomodoro-79efc.web.app/",
     "techStack": [
@@ -41,8 +42,9 @@
   {
     "header": "Reddit Mirror",
     "description": "Проект React (TypeScript): новостной сайт с загруженными постами и комментариями (на основе сайта Reddit и API Reddit). Реализованный функционал: Функциональные компоненты, Авторизация с использованием публичного API Reddit (получение и сохранение токена), Хуки React (useEffect, useState, useRef...), Ref и useRef React-hook — реализация механизма щелчка снаружи для скрытия модального окна, Custom hooks...",
-    "preview": "/projects/reddit-mirror.jpg",
+    "preview": "/projects/reddit-mirror/reddit-mirror-preview.jpg",
     "sourceCodeLink": "https://gitlab.com/jonirootman714/awesome-react",
+    "images":["/projects/reddit-mirror/reddit-mirror-1.png", "/projects/reddit-mirror/reddit-mirror-2.png", "/projects/reddit-mirror/reddit-mirror-3.png"],
     "techStack": [
       {
         "name": "React",
@@ -63,6 +65,10 @@
       {
         "name": "SSR",
         "id": "3b4ed013-6f56-45b8-9650-b35edeab8dce"
+      },
+      {
+        "name": "Git",
+        "id": "ab4ed213-6f16-45b9-edc50-b35edeab8dce"
       }
     ],
     "sourceCodeIcon": "gitlab",
@@ -71,8 +77,9 @@
   {
     "header": "CRM",
     "description": "Это CRM система управления контактными данными клиентов разработана для компании «SkillBus». Функционал: Возможность добавлять клиента в список, удалять, изменять; Клиенту можно добавить контакты(телефон, почту и др); Возможность список по дате создания, изменения, по Фамилии, Имени и Отчеству; Анимация открытия модального окна; Валидация формы перед отправкой на сервер; Индикация загрузки; Поиск с автодополнением.",
-    "preview": "/projects/skb.jpg",
+    "preview": "/projects/crm/crm-preview.jpg",
     "sourceCodeLink": "https://gitlab.com/jonirootman714/crm",
+    "images":["/projects/crm/crm-1.png", "/projects/crm/crm-2.png", "/projects/crm/crm-3.png", "/projects/crm/crm-4.png"],
     "techStack": [
       {
         "name": "Html",
@@ -95,9 +102,10 @@
     "id": "aaa5d10e-63a4-47ab-9945-ea2bfe031d07"
   },
   {
-    "header": "Coin",
+    "header": "Bank",
     "description": "Это инновационный проект, призванный объединить воедино традиционный банкинг и криптовалюты. Это будет первый банк на рынке, который открыто и свободно позволит пользователям обмениваться и распоряжаться криптовалютами наравне с другими традиционными валютами.",
-    "preview": "/projects/Coin.jpg",
+    "preview": "/projects/bank/bank-preview.jpg",
+    "images":["/projects/bank/bank-1.png", "/projects/bank/bank-2.png", "/projects/bank/bank-3.png", "/projects/bank/bank-4.png", "/projects/bank/bank-5.png", "/projects/bank/bank-6.png"],
     "sourceCodeLink": "https://gitlab.com/jonirootman714/bank",
     "techStack": [
       {
@@ -139,7 +147,8 @@
   {
     "header": "SitDownPls",
     "description": "Это многостраничный сайт который является вымышленной компанией «SitDownPls» по продаже различной мебели. На сайте доступны 3 страницы - главная, каталог, и подробное описание товара. При создании сайта использовал методологию БЭМ а также предпроцессор SASS. В качестве сборщика использовался Webpack.",
-    "preview": "/projects/sitDownPls.jpg",
+    "preview": "/projects/sit-down-pls/sit-down-pls-preview.jpg",
+    "images": ["/projects/sit-down-pls/sit-down-pls-1.png", "/projects/sit-down-pls/sit-down-pls-2.png", "/projects/sit-down-pls/sit-down-pls-3.png", "/projects/sit-down-pls/sit-down-pls-4.png", "/projects/sit-down-pls/sit-down-pls-5.png", "/projects/sit-down-pls/sit-down-pls-6.png", "/projects/sit-down-pls/sit-down-pls-7.png"],
     "sourceCodeLink": "https://gitlab.com/jonirootman714/sit-down-pls",
     "livePreviewLink": "https://sitdownpls-9892a.web.app",
     "techStack": [
@@ -174,7 +183,8 @@
   {
     "header": "W-Wave-Radio",
     "description": "Это одностраничный сайт который является вымышленной радиоплощадкой «W-Wave-Radio». Предполагается что пользователь будет слушать радио в прямом эфире, ранее записанные подкасты, передачи и т. д., а также видеть информацию о ведущих эфиров и о самом радио. При создании сайта использовал методологию БЭМ а также предпроцессор SASS. В качестве сборщика использовался Webpack.",
-    "preview": "/projects/w-wave-radio.jpg",
+    "preview": "/projects/w-wave-radio/w-wave-radio-preview.jpg",
+    "images": ["/projects/w-wave-radio/w-wave-radio-1.png", "/projects/w-wave-radio/w-wave-radio-2.png", "/projects/w-wave-radio/w-wave-radio-3.png", "/projects/w-wave-radio/w-wave-radio-4.png", "/projects/w-wave-radio/w-wave-radio-5.png", "/projects/w-wave-radio/w-wave-radio-6.png"],
     "sourceCodeLink": "https://gitlab.com/jonirootman714/w-wave-radio",
     "livePreviewLink": "https://w-wave-radio.web.app/",
     "techStack": [
@@ -203,7 +213,7 @@
         "id": "6a2e81b9-e980-4db5-95a5-2793550e71e0"
       }
     ],
-    "sourceCodeIcon": "github",
+    "sourceCodeIcon": "gitlab",
     "id": "cf793e12-9c2e-4738-b5ba-a957d137da1d"
   }
 ]}
