@@ -12,7 +12,7 @@ export default async function Page({
   const { projects } = await import("@/public/projects-data.json");
   const project = projects.find((project) => project.id === params.project);
   return (
-    <div className="container py-20 px-72">
+    <div className="container py-20 lg:px-60">
       <div className="flex py-4 items-center">
         <Link
           className="mr-2 hover:underline underline-offset-4 text-lg text-blue-300"
