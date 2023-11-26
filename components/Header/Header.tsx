@@ -1,4 +1,4 @@
-import { Github, Gitlab, LucideIcon, Mail } from "lucide-react";
+import { Gitlab, LucideIcon, Mail } from "lucide-react";
 import { SocialIcon } from "../ui/socialIcon";
 import { Logo } from "../Logo";
 import { TbBrandTelegram } from "react-icons/tb";

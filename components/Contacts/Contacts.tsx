@@ -13,20 +13,12 @@ export const Contacts = () => {
           Контакты
         </h2>
         <p className="text-center text-xl text-muted-foreground mb-24">
-          Оставляйте вашу заявку или свяжитесь со{" "}
-          <Link
-            className="hover:underline underline-offset-4 text-lg text-blue-300"
-            href={"mailto:jonirootman714@gmail.com"}
-          >
-            мной
-          </Link>
+          Если у вас есть вопросы или предложения
+          Оставляйте вашу заявку или свяжитесь через социальные сети
         </p>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <Card className="p-6">
-            <ContactForm
-              botToken={BOT_TOKEN || ""}
-              chatId={CHAT_ID || ""}
-            />
+            <ContactForm botToken={BOT_TOKEN || ""} chatId={CHAT_ID || ""} />
           </Card>
           <Card>
             <CardHeader>
