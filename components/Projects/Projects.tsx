@@ -25,9 +25,11 @@ export const Projects = async () => {
         </div>
 
         <div className="flex justify-center mt-10">
-          <Button variant={"secondary"} size={"xl"}>
-            <Link href={"/projects"}>Смотреть все</Link>
-          </Button>
+          <Link href={"/projects"}>
+            <Button variant={"secondary"} size={"xl"}>
+              Смотреть все
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
