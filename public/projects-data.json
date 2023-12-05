@@ -46,8 +46,8 @@
         "/projects/timer/timer-1.png",
         "/projects/timer/timer-2.png"
       ],
-      "sourceCodeLink": "https://github.com/PopLocker714/portfolio",
-      "livePreviewLink": "https://best-portfolio-jet.vercel.app/",
+      "sourceCodeLink": "https://github.com/PopLocker714/Timers-nodejs",
+      "livePreviewLink": "https://timers-nodejs.vercel.app",
       "techStack": [
         {
           "name": "Node.js"
