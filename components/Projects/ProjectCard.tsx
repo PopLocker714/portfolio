@@ -9,9 +9,8 @@ import {
 import Image from "next/image";
 import { Badge } from "../ui/badge";
 import Link from "next/link";
-import { Button } from "../ui/button";
-import { Github, Gitlab, LinkIcon } from "lucide-react";
 import { ProjectCardLinks } from "./ProjectCardLinks";
+import { generateUUID } from "@/utils/react/generateRandomIndex";
 
 export interface IProjectCard {
   header: string;
@@ -26,7 +25,6 @@ export interface IProjectCard {
 
 interface IProjectTechStack {
   name: string;
-  id: string;
 }
 
 export const ProjectCard = ({
@@ -39,13 +37,6 @@ export const ProjectCard = ({
   id,
   sourceCodeIcon = "other",
 }: IProjectCard) => {
-  /* const CurrentSourceCodeIcon =
-    sourceCodeIcon === "github"
-      ? Github
-      : sourceCodeIcon === "gitlab"
-      ? Gitlab
-      : LinkIcon; */
-
   return (
     <Card
       key={id}
@@ -70,7 +61,7 @@ export const ProjectCard = ({
         <div className="flex flex-wrap">
           {techStack.map((badge) => (
             <Badge
-              key={badge.id}
+              key={generateUUID()}
               className="mr-2 last:mr-0 mb-1"
               variant="outline"
             >
@@ -80,7 +71,11 @@ export const ProjectCard = ({
         </div>
       </CardContent>
       <CardFooter className="justify-between flex-wrap px-5 pb-4 items-end">
-        <ProjectCardLinks livePreviewLink={livePreviewLink} sourceCodeLink={sourceCodeLink} sourceCodeIcon={sourceCodeIcon}/>
+        <ProjectCardLinks
+          livePreviewLink={livePreviewLink}
+          sourceCodeLink={sourceCodeLink}
+          sourceCodeIcon={sourceCodeIcon}
+        />
       </CardFooter>
     </Card>
   );

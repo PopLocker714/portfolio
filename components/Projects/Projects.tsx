@@ -2,6 +2,7 @@ import { ProjectCard } from "./ProjectCard";
 import { Separator } from "../Separator";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { generateUUID } from "@/utils/react/generateRandomIndex";
 
 export const Projects = async () => {
   const { projects } = await import("@/public/projects-data.json");
@@ -16,17 +17,17 @@ export const Projects = async () => {
           Проекты
         </h2>
         <p className="text-center text-xl text-muted-foreground mb-24">
-          Вещи, которые я создал на данный момент
+          Проекты, которые я создал на данный момент
         </p>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
-          ))}
+        <div className="grid gap-6 xl:px-28 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+          {projects.map((project, i) =>
+            i > 5 ? null : <ProjectCard key={project.id} {...project} />
+          )}
         </div>
 
         <div className="flex justify-center mt-10">
           <Link href={"/projects"}>
-            <Button variant={"secondary"} size={"xl"}>
+            <Button variant={"secondary"} size={"lg"}>
               Смотреть все
             </Button>
           </Link>

@@ -26,7 +26,7 @@ export const TechStackItem = ({
       <Tooltip>
         <TooltipTrigger asChild>
           <Image
-            className="ease-out duration-300 hover:scale-125"
+            className="ease-out duration-300 hover:scale-125 w-auto h-auto"
             src={`/tech-stack/${logoName}.${ext}`}
             width={width}
             height={height}

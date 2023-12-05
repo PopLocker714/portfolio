@@ -23,7 +23,7 @@ export const ProjectSearch = () => {
       </div>
       <CommandEmpty>Проект не найден.</CommandEmpty>
       <CommandGroup>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+        <div className="grid gap-6 py-10 xl:px-28 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
           {projects.projects.map((project) => {
             let value = project.header;
             project.techStack.forEach((tech) => (value += " " + tech.name));

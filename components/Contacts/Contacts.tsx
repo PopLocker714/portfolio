@@ -7,7 +7,7 @@ export const Contacts = () => {
   const { BOT_TOKEN, CHAT_ID } = process.env;
 
   return (
-    <section id="contacts" className="py-24">
+    <section id="contacts" className="pb-24 pt-4">
       <div className="container">
         <h2 className="text-center scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
           Контакты

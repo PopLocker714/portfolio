@@ -1,9 +1,7 @@
-import { useGenerateId } from "@/hooks/useGenerateId";
 import { ITechStackItem, TechStackItem } from "./TechStackItem";
+import { generateUUID } from "@/utils/react/generateRandomIndex";
 
 export const TechStack = () => {
-  const [generateId] = useGenerateId();
-
   const techStackItems: ITechStackItem[] = [
     {
       logoName: "html",
@@ -67,8 +65,6 @@ export const TechStack = () => {
     },
   ];
 
-  const techStackItemsWithId = techStackItems.map((item) => generateId(item));
-
   return (
     <section className="pb-20 sm:pt-0 pt-10 bg-secondary">
       <div className="container">
@@ -79,12 +75,13 @@ export const TechStack = () => {
           Технологии, с которыми я работал в последнее время
         </p>
         <div className="grid md:grid-cols-6 grid-cols-3 gap-8 justify-items-center">
-          {techStackItemsWithId.map((item) => (
+          {techStackItems.map(({ height, logoName, width, ext }) => (
             <TechStackItem
-              key={item.id}
-              height={item.height}
-              width={item.width}
-              logoName={item.logoName}
+              key={generateUUID()}
+              height={height}
+              width={width}
+              logoName={logoName}
+              ext={ext}
             />
           ))}
         </div>

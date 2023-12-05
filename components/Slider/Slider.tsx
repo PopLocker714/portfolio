@@ -16,6 +16,8 @@ export const Slider = (props: {
         <SwiperSlide key={generateUUID()}>
           {
             <Image
+              priority
+              fetchPriority="high"
               src={image}
               width={props.imagesSize.width}
               height={props.imagesSize.height}

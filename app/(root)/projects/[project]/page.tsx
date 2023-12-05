@@ -1,6 +1,7 @@
 import { ProjectCardLinks } from "@/components/Projects/ProjectCardLinks";
 import { Slider } from "@/components/Slider";
 import { Badge } from "@/components/ui/badge";
+import { generateUUID } from "@/utils/react/generateRandomIndex";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
@@ -12,7 +13,7 @@ export default async function Page({
   const { projects } = await import("@/public/projects-data.json");
   const project = projects.find((project) => project.id === params.project);
   return (
-    <div className="container py-20 lg:px-60">
+    <div className="container py-24 lg:px-60">
       <div className="flex py-4 items-center">
         <Link
           className="mr-2 hover:underline underline-offset-4 text-lg text-blue-300"
@@ -46,13 +47,13 @@ export default async function Page({
       />
       <p className="text-lg mb-4 font-bold">Технический стек:</p>
       <div className="flex">
-        {project?.techStack.map((tech) => (
+        {project?.techStack.map(({ name }) => (
           <Badge
-            key={tech.id}
+            key={generateUUID()}
             className="mr-2 last:mr-0 mb-1"
             variant="outline"
           >
-            {tech.name}
+            {name}
           </Badge>
         ))}
       </div>
